@@ -1,0 +1,19 @@
+/* RootLayout.module.css */
+
+.root-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.root-layout__main {
+  padding-top: 80px; /* Adjusted for a slightly taller navbar */
+  flex-grow: 1;
+}
+
+.root-layout__container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}

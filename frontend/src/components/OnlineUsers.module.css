@@ -1,0 +1,91 @@
+/* OnlineUsers.module.css */
+
+.online-users {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 100%;
+}
+
+.online-users__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.online-users__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 30vh;
+  overflow-y: auto;
+  padding-right: 0.5rem; /* For scrollbar */
+}
+
+@media (min-width: 768px) {
+  .online-users__list {
+    max-height: 65vh;
+  }
+}
+
+.online-users__user {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.online-users__user:hover {
+  background-color: #e9ecef;
+}
+
+.online-users__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.online-users__name {
+  flex-grow: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.online-users__status {
+  background-color: #28a745;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Custom Scrollbar */
+.online-users__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.online-users__list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.online-users__list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.online-users__list::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
