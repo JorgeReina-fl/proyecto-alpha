@@ -14,7 +14,7 @@ export const SocketProvider = ({ children }) => {
   const fetchMessages = useCallback(async () => {
     if (!token) return;
     try {
-      const response = await axios.get('/api/data/messages', {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/data/messages`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (response.data.success) {

@@ -10,7 +10,18 @@ const data = require('./routes/dataRoutes');
 const app = express();
 
 // Middlewares
-app.use(cors());
+// Lee la URL del frontend desde las variables de entorno
+// Proporciona un valor por defecto para el desarrollo local
+const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
+
+// Configura CORS
+const corsOptions = {
+  origin: FRONTEND_URL,
+  optionsSuccessStatus: 200
+};
+
+// Middlewares
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Serve static demo files from /public

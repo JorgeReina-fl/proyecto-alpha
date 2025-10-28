@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
   const fetchUser = useCallback(async () => {
     if (token) {
       try {
-        const response = await axios.get('/api/auth/me', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (response.data.success) {

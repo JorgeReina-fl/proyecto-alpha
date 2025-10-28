@@ -14,12 +14,12 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__container}>
-        <RouterLink to="/" className={styles['navbar__logo-link']}>
+        <a href="https://jorgereina.onrender.com/" className={styles['navbar__logo-link']} target="_blank" rel="noopener noreferrer">
           <div className={styles.navbar__logo}>
             <img src="/logo.png" alt="Logo" className={styles['navbar__logo-img']} />
             <span className={styles['navbar__logo-text']}>Chat App</span>
           </div>
-        </RouterLink>
+        </a>
 
         <div className={styles['navbar__hamburger']} onClick={toggleMenu}>
           <div className={styles['hamburger-line']}></div>

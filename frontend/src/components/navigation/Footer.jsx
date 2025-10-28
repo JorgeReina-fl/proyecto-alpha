@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,14 +9,14 @@ export default function Footer() {
           © {new Date().getFullYear()} Chat App. Todos los derechos reservados.
         </p>
         <div className={styles['footer__social-links']}>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
+          <a href="https://github.com/JorgeReina-fl" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
+          <a href="https://www.linkedin.com/in/jorgereinafl/" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
             <FaLinkedin />
           </a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
-            <FaTwitter />
+          <a href="https://www.instagram.com/jorgereina.fl/" target="_blank" rel="noopener noreferrer" className={styles['footer__social-link']}>
+            <FaInstagram />
           </a>
         </div>
       </div>

@@ -85,7 +85,11 @@ Asegúrate de tener instalado lo siguiente:
       ```sh
       npm install
       ```
-    - El frontend está configurado para conectarse al backend a través de un proxy definido en `vite.config.js`. No se necesita configuración adicional si el backend se ejecuta en el puerto `5000`.
+    - Crea un archivo `.env` en la raíz de la carpeta `frontend` y añade la siguiente variable:
+      ```env
+      # frontend/.env
+      VITE_API_URL=http://localhost:3000
+      ```
 
 ### Ejecución
 
@@ -106,6 +110,34 @@ Debes tener dos terminales abiertas, una para el backend y otra para el frontend
     - La aplicación se abrirá en `http://localhost:5173` (o el puerto que Vite asigne).
 
 ¡Y listo! Ahora puedes registrar un nuevo usuario y empezar a chatear.
+
+---
+
+## ☁️ Despliegue en Render
+
+Este proyecto requiere dos servicios en Render:
+
+1.  **Servicio Backend (Web Service):**
+    * **Runtime:** Node
+    * **Comando de Build:** `npm install`
+    * **Comando de Inicio:** `node server.js` (o `npm start`)
+    * **Variables de Entorno:**
+        * `DATABASE_URL`: (Tu URL de la base de datos de producción)
+        * `JWT_SECRET`: (Tu secreto de JWT de producción)
+        * `FRONTEND_URL`: (La URL pública de tu frontend, ej: `https://mi-frontend.onrender.com`)
+
+2.  **Servicio Frontend (Static Site):**
+    * **Framework:** Vite
+    * **Comando de Build:** `npm install && npm run build`
+    * **Directorio de Publicación:** `dist`
+    * **Variables de Entorno:**
+        * `VITE_API_URL`: (La URL pública de tu backend, ej: `https://mi-backend.onrender.com`)
+
+### ❄️ Evitar el "Cold Start" (Plan Gratuito)
+
+El plan gratuito de Render suspende el backend tras 15 minutos de inactividad.
+
+Para evitarlo, el backend incluye un endpoint `/health`. Puedes usar un servicio gratuito como **UptimeRobot** y configurarlo para que haga "ping" (HTTP GET) a `https://tu-backend.onrender.com/health` cada 10-14 minutos.
 
 ---
 
