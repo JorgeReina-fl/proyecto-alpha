@@ -30,7 +30,7 @@ export const SocketProvider = ({ children }) => {
 
     fetchMessages();
 
-    const socketInstance = io('http://localhost:5000', {
+    const socketInstance = io(import.meta.env.VITE_API_URL, {
       auth: { token },
     });
 
