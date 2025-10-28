@@ -15,7 +15,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('/api/data/users', {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/data/users`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (response.data.success) {
