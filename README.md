@@ -2,7 +2,7 @@
 
 AlphaChat es una aplicación de chat full-stack construida con el stack MERN (MongoDB, Express, React, Node.js) y WebSockets para comunicación en tiempo real.
 
-![AlphaChat Demo](https://via.placeholder.com/800x450.png?text=Añade+aquí+una+captura+de+pantalla+o+GIF)
+![AlphaChat Demo]([https://proyecto-alpha-backend.onrender.com/])
 *<p align="center">Agrega una captura de pantalla o un GIF de la aplicación aquí.</p>*
 
 ---
@@ -189,12 +189,12 @@ Las contribuciones son bienvenidas. Si deseas mejorar el proyecto, por favor sig
 
 ## 📄 Licencia
 
-Distribuido bajo la Licencia MIT. Consulta `LICENSE.txt` para más información. (Nota: Debes añadir un archivo LICENSE).
+Distribuido bajo la Licencia MIT.
 
 ---
 
 ## 📧 Contacto
 
-Jorge Reina - [TuEmail@ejemplo.com](mailto:TuEmail@ejemplo.com)
+Jorge Reina - [TuEmail@ejemplo.com](mailto:jorgereina.rp@hotmail.com)
 
-Enlace del Proyecto: [https://github.com/tu-usuario/proyecto-alpha](https://github.com/tu-usuario/proyecto-alpha)
+Enlace del Proyecto: [https://github.com/tu-usuario/proyecto-alpha](https://github.com/JorgeReina-fl/proyecto-alpha)
