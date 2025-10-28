@@ -27,6 +27,13 @@ app.use(express.json());
 // Serve static demo files from /public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Mount routers\napp.use(\'/api/auth\', auth);\napp.use(\'/api/data\', data);\n\n// Serve frontend for production\nif (process.env.NODE_ENV === \'production\') {\n  // Serve static files from the React app\n  app.use(express.static(path.join(__dirname, \'..\/frontend/dist\')));\n\n  // The \"catchall\" handler: for any request that doesn\'t\n  // match one above, send back React\'s index.html file.\n  app.get(\'*\' (req, res) => {\n    res.sendFile(path.join(__dirname, \'..\/frontend/dist/index.html\'));\n  });\n} else {\n    // Fallback to index.html for single-page demo (optional)\n    app.get(\'/\', (req, res) => {\n        res.sendFile(path.join(__dirname, \'public\', \'index.html\'));\n    });\n}
+// Mount routers
+app.use('/api/auth', auth);
+app.use('/api/data', data);
+
+// Fallback to index.html for single-page demo (optional)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 module.exports = app;

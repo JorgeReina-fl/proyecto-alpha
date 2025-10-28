@@ -31,6 +31,11 @@ export const router = createBrowserRouter([
         path: 'register',
         element: <RegisterPage />,
       },
+      // Catch-all route for unknown paths
+      {
+        path: '*',
+        element: <Navigate to="/" replace />,
+      },
     ],
   },
 ], {

@@ -132,6 +132,11 @@ Este proyecto requiere dos servicios en Render:
     * **Directorio de Publicación:** `dist`
     * **Variables de Entorno:**
         * `VITE_API_URL`: (La URL pública de tu backend, ej: `https://mi-backend.onrender.com`)
+    * **Reglas de Reescritura (Redirects/Rewrites):**
+        * **Source:** `/*`
+        * **Destination:** `/index.html`
+        * **Action:** Rewrite
+        > **Importante:** Esta regla es esencial para que las rutas de React Router funcionen correctamente. Sin ella, recibirás un error 404 al recargar la página en cualquier ruta que no sea la raíz.
 
 ### ❄️ Evitar el "Cold Start" (Plan Gratuito)
 
